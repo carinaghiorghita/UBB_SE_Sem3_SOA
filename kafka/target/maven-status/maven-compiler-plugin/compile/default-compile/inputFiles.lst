@@ -1,5 +1,5 @@
-D:\master\sem3\SOA-main\kafka\src\main\java\com\example\application\Application.java
-D:\master\sem3\SOA-main\kafka\src\main\java\com\example\application\MessageEndpoint.java
-D:\master\sem3\SOA-main\kafka\src\main\java\com\example\application\model\Message.java
-D:\master\sem3\SOA-main\kafka\src\main\java\com\example\application\model\MessageSerializer.java
-D:\master\sem3\SOA-main\kafka\src\main\java\com\example\application\model\MessageDeSerializer.java
+D:\master\sem3\UBB_SE_Sem3_SOA\kafka\src\main\java\com\example\application\model\MessageSerializer.java
+D:\master\sem3\UBB_SE_Sem3_SOA\kafka\src\main\java\com\example\application\Application.java
+D:\master\sem3\UBB_SE_Sem3_SOA\kafka\src\main\java\com\example\application\model\Message.java
+D:\master\sem3\UBB_SE_Sem3_SOA\kafka\src\main\java\com\example\application\MessageEndpoint.java
+D:\master\sem3\UBB_SE_Sem3_SOA\kafka\src\main\java\com\example\application\model\MessageDeSerializer.java

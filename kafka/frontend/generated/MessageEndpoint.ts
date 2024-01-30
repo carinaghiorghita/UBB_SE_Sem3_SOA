@@ -1,7 +1,7 @@
 /**
  * This module is generated from MessageEndpoint.java
  * All changes to this file are overridden. Please consider to make changes in the corresponding Java file if necessary.
- * @see {@link file:///D:/master/sem3/SOA-main/kafka/src/main/java/com/example/application/MessageEndpoint.java}
+ * @see {@link file:///D:/master/sem3/UBB_SE_Sem3_SOA/kafka/src/main/java/com/example/application/MessageEndpoint.java}
  * @module MessageEndpoint
  */
 

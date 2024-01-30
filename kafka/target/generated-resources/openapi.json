@@ -11,7 +11,7 @@
   "tags" : [ {
     "name" : "MessageEndpoint",
     "description" : "",
-    "x-vaadin-file-path" : "file:///D:/master/sem3/SOA-main/kafka/src/main/java/com/example/application/MessageEndpoint.java"
+    "x-vaadin-file-path" : "file:///D:/master/sem3/UBB_SE_Sem3_SOA/kafka/src/main/java/com/example/application/MessageEndpoint.java"
   } ],
   "paths" : {
     "/MessageEndpoint/join" : {
@@ -94,7 +94,7 @@
             "type" : "string"
           }
         },
-        "x-vaadin-file-path" : "file:///D:/master/sem3/SOA-main/kafka/src/main/java/com/example/application/model/Message.java"
+        "x-vaadin-file-path" : "file:///D:/master/sem3/UBB_SE_Sem3_SOA/kafka/src/main/java/com/example/application/model/Message.java"
       }
     },
     "securitySchemes" : {
