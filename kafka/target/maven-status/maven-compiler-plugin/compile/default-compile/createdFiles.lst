@@ -1,0 +1,5 @@
+com\example\application\MessageEndpoint.class
+com\example\application\model\MessageSerializer.class
+com\example\application\Application.class
+com\example\application\model\MessageDeSerializer.class
+com\example\application\model\Message.class

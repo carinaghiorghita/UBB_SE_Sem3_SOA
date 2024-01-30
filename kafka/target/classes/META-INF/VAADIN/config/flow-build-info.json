@@ -1,0 +1,18 @@
+{
+  "productionMode": false,
+  "useDeprecatedV14Bootstrapping": false,
+  "eagerServerLoad": false,
+  "npmFolder": "D:\\master\\sem3\\SOA-main\\kafka",
+  "node.version": "v18.13.0",
+  "node.download.root": "https://nodejs.org/dist/",
+  "generatedFolder": "D:\\master\\sem3\\SOA-main\\kafka\\target\\frontend",
+  "frontendFolder": "D:\\master\\sem3\\SOA-main\\kafka\\frontend",
+  "connect.javaSourceFolder": "D:\\master\\sem3\\SOA-main\\kafka\\src\\main\\java",
+  "javaResourceFolder": "D:\\master\\sem3\\SOA-main\\kafka\\src\\main\\resources",
+  "connect.applicationProperties": "D:\\master\\sem3\\SOA-main\\kafka\\src\\main\\resources\\application.properties",
+  "connect.openApiFile": "D:\\master\\sem3\\SOA-main\\kafka\\target\\generated-resources\\openapi.json",
+  "project.frontend.generated": "D:\\master\\sem3\\SOA-main\\kafka\\frontend\\generated",
+  "pnpm.enable": false,
+  "require.home.node": false,
+  "build.folder": "target"
+}

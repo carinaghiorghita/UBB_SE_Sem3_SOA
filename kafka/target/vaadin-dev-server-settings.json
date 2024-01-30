@@ -1,0 +1,16 @@
+{
+  "frontendFolder": "D:/master/sem3/SOA-main/kafka/frontend",
+  "themeFolder": "themes",
+  "themeResourceFolder": "D:/master/sem3/SOA-main/kafka/frontend/generated/jar-resources",
+  "staticOutput": "D:/master/sem3/SOA-main/kafka/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
+  "generatedFolder": "generated",
+  "statsOutput": "D:\\master\\sem3\\SOA-main\\kafka\\target\\classes\\META-INF\\VAADIN\\config",
+  "frontendBundleOutput": "D:\\master\\sem3\\SOA-main\\kafka\\target\\classes\\META-INF\\VAADIN\\webapp",
+  "jarResourcesFolder": "D:/master/sem3/SOA-main/kafka/frontend/generated/jar-resources",
+  "generatedFlowImportsFolder": "target/frontend",
+  "themeName": "",
+  "clientServiceWorkerSource": "D:\\master\\sem3\\SOA-main\\kafka\\target\\sw.ts",
+  "pwaEnabled": true,
+  "offlineEnabled": true,
+  "offlinePath": "'.'"
+}

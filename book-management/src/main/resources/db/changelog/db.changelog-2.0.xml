@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+    <changeSet id="1" author="root">
+        <sql>
+            CREATE TABLE book
+            (
+                id          BIGSERIAL    PRIMARY KEY,
+                name        VARCHAR(255) NOT NULL,
+                author      VARCHAR(255) NOT NULL,
+                description VARCHAR(255) NOT NULL,
+                genre       VARCHAR(255),
+                price       BIGINT,
+                discount    BIGINT
+            );
+        </sql>
+        <rollback>
+            DROP TABLE book;
+        </rollback>
+    </changeSet>
+    <changeSet id="2" author="root">
+        <sql>
+            CREATE TABLE book_order
+            (
+                id          BIGSERIAL    PRIMARY KEY,
+                book_id       BIGINT NOT NULL,
+                user_id       BIGINT NOT NULL,
+                date_of_issue TIMESTAMP,
+                CONSTRAINT fk_order_proc FOREIGN KEY (book_id) REFERENCES book (id) ON DELETE CASCADE ON UPDATE CASCADE
+            );
+        </sql>
+        <rollback>
+            DROP TABLE book_order;
+        </rollback>
+    </changeSet>
+    <changeSet id="3" author="root">
+        <sql>
+            INSERT INTO book (name, author, description, genre, price, discount)
+            VALUES ('Anna Karenina', 'Leo Tolstoy',
+                    'Synopsis: “Anna Karenina tells of the doomed love affair between the sensuous and rebellious Anna and the dashing officer, Count Vronsky. Tragedy unfolds as Anna rejects her passionless marriage and thereby exposes herself to the hypocrisies of society.”',
+                    'Bibliography', 100, 5);
+            INSERT INTO book (name, author, description, genre, price, discount)
+            VALUES ('Madame Bovary', 'Gustav Flaubert',
+                    'Synopsis: “When Emma Rouault marries Charles Bovary she imagines she will pass into the life of luxury and passion that she reads about in sentimental novels and women’s magazines.”',
+                    'Action', 50, 0);
+            INSERT INTO book (name, author, description, genre, price, discount)
+            VALUES ('War and Peace', 'Leo Tolstoy',
+                    'Synopsis: “The novel chronicles the French invasion of Russia and the impact of the Napoleonic era on Tsarist society through the stories of five Russian aristocratic families.”',
+                    'Drama', 20, 10);
+            INSERT INTO book (name, author, description, genre, price, discount)
+            VALUES ('Lolita', 'Vladimir Nabokov',
+                    'Synopsis: “Awe and exhiliration–along with heartbreak and mordant wit–abound in Lolita, Nabokov’s most famous and controversial novel.”',
+                    'Crime', 150,
+                    30);
+            INSERT INTO book (name, author, description, genre, price, discount)
+            VALUES ('The Adventures of Huckleberry Finn', ' Mark Twain',
+                    'Synopsis: “A nineteenth-century boy from a Mississippi River town recounts his adventures.”',
+                    'Drama',
+                    2500, 60);
+        </sql>
+        <rollback>
+            TRUNCATE TABLE book;
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

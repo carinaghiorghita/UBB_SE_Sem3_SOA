@@ -1,0 +1,112 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "Vaadin application",
+    "version" : "0.0.1"
+  },
+  "servers" : [ {
+    "url" : "http://localhost:8080/connect",
+    "description" : "Vaadin backend"
+  } ],
+  "tags" : [ {
+    "name" : "MessageEndpoint",
+    "description" : "",
+    "x-vaadin-file-path" : "file:///D:/master/sem3/SOA-main/kafka/src/main/java/com/example/application/MessageEndpoint.java"
+  } ],
+  "paths" : {
+    "/MessageEndpoint/join" : {
+      "post" : {
+        "tags" : [ "MessageEndpoint" ],
+        "operationId" : "MessageEndpoint_join_POST",
+        "responses" : {
+          "200" : {
+            "description" : "",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "description" : "",
+                  "nullable" : true,
+                  "items" : {
+                    "nullable" : true,
+                    "allOf" : [ {
+                      "$ref" : "#/components/schemas/com.example.application.model.Message"
+                    } ]
+                  },
+                  "x-flux" : true
+                }
+              }
+            }
+          }
+        },
+        "security" : [ {
+          "vaadin-connect-oauth2" : [ ]
+        } ]
+      }
+    },
+    "/MessageEndpoint/send" : {
+      "post" : {
+        "tags" : [ "MessageEndpoint" ],
+        "operationId" : "MessageEndpoint_send_POST",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "required" : [ "message" ],
+                "type" : "object",
+                "properties" : {
+                  "message" : {
+                    "nullable" : true,
+                    "allOf" : [ {
+                      "$ref" : "#/components/schemas/com.example.application.model.Message"
+                    } ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : ""
+          }
+        },
+        "security" : [ {
+          "vaadin-connect-oauth2" : [ ]
+        } ]
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "com.example.application.model.Message" : {
+        "required" : [ "text", "userName" ],
+        "type" : "object",
+        "properties" : {
+          "text" : {
+            "type" : "string"
+          },
+          "time" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "userName" : {
+            "type" : "string"
+          }
+        },
+        "x-vaadin-file-path" : "file:///D:/master/sem3/SOA-main/kafka/src/main/java/com/example/application/model/Message.java"
+      }
+    },
+    "securitySchemes" : {
+      "vaadin-connect-oauth2" : {
+        "type" : "oauth2",
+        "flows" : {
+          "password" : {
+            "tokenUrl" : "/oauth/token",
+            "scopes" : { }
+          }
+        }
+      }
+    }
+  }
+}
