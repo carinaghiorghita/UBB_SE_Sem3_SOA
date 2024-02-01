@@ -47,17 +47,17 @@ services:
   client:
     build: D:\master\sem3\UBB_SE_Sem3_SOA\soa-client
     environment:
-      - REACT_APP_PORT=4000
+      - REACT_APP_PORT=3000
     expose:
-      - 4000
+      - 3000
     ports:
-      - "4000:4000"
+      - "3000:3000"
     links:
       - zuul-container
       - eureka-container
       - user-container
       - book-container
-    command: npm start
+    command: npm start -- --host 0.0.0.0
 
   zookeeper:
     image: wurstmeister/zookeeper
